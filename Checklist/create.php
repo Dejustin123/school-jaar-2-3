@@ -2,24 +2,19 @@
 <?php require "function.php";?>
 
 <Div class="container">
-    <h2>Content</h2>
-    <?php
-    $result=GetAllCheck();
-    foreach($result as $results){      
-    ?>
-    <div id="container-fluid" style="background-color:#563d7c; padding:10px ;">
-        <h2 class="title"><?php echo $results['Name']; ?></h2>
-        <p class="text"><?php echo $results['Description']; ?></p>
-        <button class="button" href="edit.php">Edit</button>
-        
-    </div>
-    <?php 
-    }
-    ?>
+    <form method="post" action="modules/create_function.php" name="create_form">
+        <input type="text" name="Name"></input>
+        <input type="text-area" name="Description"></input>
+        <select name="Status" id="select">
+            <option value="1">In afwerking</option>
+            <option value="2">Klaar</option>
+            <option value="3">Bezig</option>
+            <option value="4">Nog beginnen</option>
+        </select>
+        <button name="submit" >Maak Check aan</button>
+    </form>
 </Div>
 <div class="container">
     <p>extra content:</p>
-
-
 </div>
 <?php include "footer.php";?>

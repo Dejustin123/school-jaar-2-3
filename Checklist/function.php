@@ -19,9 +19,8 @@ function openDatabaseConnection(){
 // Validator functie voor posts
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$id = test_input($_POST["ID"]);
-	$name = test_input($_POST["naam"]);
-	$desc = test_input($_POST["Descriptie"]);
+	$name = test_input($_POST["Name"]);
+	$desc = test_input($_POST["Description"]);
 	$status = test_input($_POST["Status"]);
 }
 function test_input($data) {
@@ -29,7 +28,12 @@ function test_input($data) {
 	$data = stripslashes($data);
 	$data = htmlspecialchars($data);
 	return $data;
-  }
+}
+
+$home_page = header('index.php');
+$edit_page = header('edit.php');
+$make_page = header('create.php');
+
 // functie's om query uit te voeren
 function GetAllCheck(){
 	$conn = openDatabaseConnection();
@@ -39,21 +43,9 @@ function GetAllCheck(){
 	return $result;
 	$conn = NULL;
 }
-function DeleteCheck($id){
-	$query = $conn->prepare("DELETE * FROM `checklist` WHERE id->:id");
-	$query->execute();
-	$result = $query->fetchAll();
-	return $result;
-	$conn = NULL;
-}
+
 function Getcheck(){
-	$query = $conn->prepare('SELECT * FROM `checklist` ');
-	$query->execute();
-	$result = $query->fetchAll();
-	return $result;
-	$conn = NULL;
-}
-function EditCheck(){
+	$conn = openDatabaseConnection();
 	$query = $conn->prepare('SELECT * FROM `checklist` ');
 	$query->execute();
 	$result = $query->fetchAll();
