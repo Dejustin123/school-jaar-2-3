@@ -3,8 +3,17 @@
     background-color: grey;
 
 }
+a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
 .title{
     color: white;
+}
+.title-delete{
+    color:black ;
+    display: inline-block;
 }
 .text{
     color: white; 
@@ -19,13 +28,26 @@
 .right{
     float: right;
 }
+.right-delete{
+    padding-top: 5%;
+    float: right;
+}
 .homepage-container{
     border-bottom: #B50000 1px solid;
 }
-#container-edit{
+#container-edit {
     margin: 0 auto;
-    background-color: crimson;
+    background-color: #f30672;
     width: 80%;
+}
+#container-Delete{
+    background-color: #eae321;
+    margin: 0 auto;
+    width: 80%;
+    padding: 5%;
+}
+#container-Delete text{
+    color: black;
 }
 #edit-form{
     padding:10% 10% 10% 10%;
@@ -37,6 +59,10 @@
 }
 .button-index{
     display: inline-block;
+}
+.button-index-del{
+    display: inline-block;
+    color: rgb(150, 0, 0);
 }
 .status{
     display: inline-block;
@@ -52,5 +78,15 @@ li{
 }
 .form-control{
     width: 20%;
+    display: inline-block;
+}
+.homepage-container .time{
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 5% 25% 0 25%;
+    height: 40px;
+    font-size: 20px;
+}
+.inline-block-box{
     display: inline-block;
 }

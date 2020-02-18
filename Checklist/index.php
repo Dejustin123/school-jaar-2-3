@@ -16,7 +16,7 @@
         <div class="right">
             <p class="time"><?php echo $results['Time'];?></p>
             <a class="button-index" href="edit.php?ID=<?php echo $results['ID'];?>">Edit<i class="fas fa-pencil-alt"></i></a>
-            <a class="button-index" href="delete.php?ID=<?php echo $results['ID'];?>">Delete<i class="fas fa-trash-alt"></i></a>
+            <a class="button-index-del" href="delete.php?ID=<?php echo $results['ID'];?>">Delete<i class="fas fa-trash-alt"></i></a>
         </div>
     </div>
     <?php 
