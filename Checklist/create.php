@@ -1,20 +1,19 @@
 <?php include "header.php";?>
 <?php require "function.php";?>
 
-<Div class="container">
+<Div class="form-create">
+    <h1>Maak een taak aan</h1>
     <form method="post" action="modules/create_function.php" name="create_form">
-        <input type="text" name="Name"></input>
-        <input type="text-area" name="Description"></input>
-        <select name="Status" id="select">
-            <option value="1">In afwerking</option>
-            <option value="2">Klaar</option>
-            <option value="3">Bezig</option>
-            <option value="4">Nog beginnen</option>
+        <input class="form-control" type="text" value="name" name="Name"></input>
+        <input class="form-control" value="task" type="text-area" name="Description"></input>
+        <select class="form-control" name="Status" id="select">
+            <option value="in afwerking">In afwerking</option>
+            <option value="klaar">Klaar</option>
+            <option value="bezig">Bezig</option>
+            <option value="nog beginnen">Nog beginnen</option>
         </select>
-        <button name="submit" >Maak Check aan</button>
+        <input class="form-control" type="time" name='Time'>
+        <button class="btn btn-light" name="submit" >Maak Check aan</button>
     </form>
 </Div>
-<div class="container">
-    <p>extra content:</p>
-</div>
 <?php include "footer.php";?>

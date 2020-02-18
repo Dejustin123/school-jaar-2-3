@@ -1,11 +1,56 @@
 .footer-container{
     width: 100%;
-    background-color: #563d7c;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.05),inset 0 -1px 0 rgba(0,0,0,.1);
+    background-color: grey;
+
 }
 .title{
     color: white;
 }
 .text{
     color: white; 
+}
+.nav-li{
+    display:inline-block;
+}
+.left , .right{
+    display: inline-block;
+    height: 100%;
+}
+.right{
+    float: right;
+}
+.homepage-container{
+    border-bottom: #B50000 1px solid;
+}
+#container-edit{
+    margin: 0 auto;
+    background-color: crimson;
+    width: 80%;
+}
+#edit-form{
+    padding:10% 10% 10% 10%;
+    width: 100%;
+}
+.title{
+    display: inline-block;
+    margin-right: 10px;
+}
+.button-index{
+    display: inline-block;
+}
+.status{
+    display: inline-block;
+}
+li{
+    display: inline-block;
+}
+
+.form-create{
+    margin: 0 7.5% 0% 7.5%;
+    padding: 10% 10% 10% 10%;
+    background-color: #4DA6FF;
+}
+.form-control{
+    width: 20%;
+    display: inline-block;
 }

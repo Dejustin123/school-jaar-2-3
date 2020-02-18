@@ -4,23 +4,23 @@
 <Div class="container">
     <h2>Content</h2>
     <?php
-    $result=GetAllCheck();
+    $result = GetAllCheck();
     foreach($result as $results){      
     ?>
-    <div id="container-fluid" style="background-color:#563d7c; padding:10px ;">
-    <?php echo $results['ID']; ?>
-        <h2 class="title"><?php echo $results['Name']; ?></h2>
-        <p class="text"><?php echo $results['Description']; ?></p>
-        <button class="button" href="<?php  ?>">Edit</button>
-        
+    <div id="container-fluid" class="homepage-container" style="background-color:crimson; padding:50px ;">
+        <div class="left">
+            <h2 class="title"><?php echo $results['Name']; ?></h2><i class="fas fa-user"></i>
+            <p class="text"><?php echo $results['Description']; ?></p>
+            <p class="status" ><?php echo $results['Status']?></p>
+        </div>
+        <div class="right">
+            <p class="time"><?php echo $results['Time'];?></p>
+            <a class="button-index" href="edit.php?ID=<?php echo $results['ID'];?>">Edit<i class="fas fa-pencil-alt"></i></a>
+            <a class="button-index" href="delete.php?ID=<?php echo $results['ID'];?>">Delete<i class="fas fa-trash-alt"></i></a>
+        </div>
     </div>
     <?php 
     }
     ?>
 </Div>
-<div class="container">
-    <p>extra content:</p>
-
-
-</div>
 <?php include "footer.php";?>
