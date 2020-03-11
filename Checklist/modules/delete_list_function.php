@@ -2,12 +2,12 @@
 require '../function.php';
 
 if (isset($_POST)) {
-	DeleteCheck($_POST['ID']);
+	DeleteList($_POST['ID']);
 }
 
-function DeleteCheck($id){
+function DeleteList($id){
 	$conn = openDatabaseConnection();
-	$query = $conn->prepare("DELETE FROM `checklist` WHERE ID=:id");
+	$query = $conn->prepare("DELETE FROM `list` WHERE id=:id");
 	$query->execute([':id'=>$id]);
 	$conn = NULL;
 	header('location:../index.php');

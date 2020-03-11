@@ -5,15 +5,14 @@
     $data = Getcheck($_GET["ID"]);
 ?>
 <div id="container-Delete">
-    <div class="left">
-            <h2 class="title-delete"><?php echo $data['Name']; ?></h2><i class="fas fa-user"></i>
-            <p class="desc"><?php echo $data['Description']; ?></p><br>
-            <p class="inline-block-box" ><?php echo $data['Status']?></p>
-            <p class="inline-block-box"><?php echo $data['Time'];?></p>
-    </div>
-    <div class="right-delete">
-            <p>Are you sure you want to delete this item? <a class="button-index-del" href="delete_function.php">Delete<i class="fas fa-trash-alt"></i></a></p>
-            <a href="index.php">Go back<i class="fas fa-angle-double-left"></i></a>
-    </div>
+    <form method="post" id="edit-form" action="modules/delete_function.php">
+        <input class="form-control" type="hidden" name="ID" value="<?php echo $data["ID"]?>">
+        <input class="form-control" type="text" name="Name" disabled value="<?php echo $data["Name"];?>"><i class="fa fa-user"></i>
+        <input class="form-control" type="text" name="Description" disabled value="<?php echo $data["Description"];?>">
+        <select class="form-control" name="Status" id="select" disabled value="<?php echo $data["Status"];?>">
+        </select>
+        <input class="form-control" type="time" name='Time' disabled value="<?php echo $data["Time"];?>">
+        <button class="btn btn-light" name="submit">Verwijder uw bericht</button>
+    </form>
 </Div>
 <?php include "footer.php";?>
