@@ -5,7 +5,7 @@ require '../function.php';
 if(isset($_POST)){
 	CreateCheck();
 }
-
+//create check function
 function CreateCheck(){
 	$conn = openDatabaseConnection();
 	$query = $conn->prepare('INSERT INTO `checklist` (`ID`, `Name`, `Description`, `Status`,`Time`,`list_id`)

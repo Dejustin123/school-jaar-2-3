@@ -3,7 +3,9 @@
 
 <Div class="container">
     <?php
+    //checks krijgen
     $result = GetAllCheck();
+    //lists krijgen
     $lists = getList();
 foreach($lists as $list){
 
@@ -15,6 +17,7 @@ foreach($lists as $list){
     foreach($result as $results){    
     ?>
     <?php
+        //checkt welke list er bij welke check hoort
         if($results['list_id']===$list["id"]){
         ?>
     <div id="container-fluid" class="homepage-container" style="background-color:crimson; padding:50px ;">

@@ -5,7 +5,7 @@ if(isset($_POST)){
 	CreateList();
 	// var_dump($_POST);
 }
-// creeërt een list
+//create list function
 function CreateList(){
 	$conn = openDatabaseConnection();
 	$query = $conn->prepare(
