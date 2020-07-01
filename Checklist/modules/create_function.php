@@ -2,11 +2,13 @@
 require '../function.php';
 
 // create function
-if(isset($_POST)){
+if (isset($_POST))
+{
 	CreateCheck();
 }
 //create check function
-function CreateCheck(){
+function CreateCheck()
+{
 	$conn = openDatabaseConnection();
 	$query = $conn->prepare('INSERT INTO `checklist` (`ID`, `Name`, `Description`, `Status`,`Time`,`list_id`)
 							VALUES

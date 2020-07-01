@@ -3,11 +3,13 @@ require '../function.php';
 
 
 
-if(isset($_POST)){
+if (isset($_POST))
+{
     Editlist($_POST);
 }
 //edit list function
-function Editlist($input){
+function Editlist($input)
+{
 	$conn = openDatabaseConnection();
 	$query = $conn->prepare('UPDATE `list` SET name = :name WHERE `list` . id=:id');
 	$query->bindparam(':id',$input['id']);

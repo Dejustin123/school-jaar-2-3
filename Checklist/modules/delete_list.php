@@ -1,5 +1,5 @@
-<?php include "header.php";?>
-<?php require "function.php";?>
+<?php include "../module-header.php";?>
+<?php require "../function.php";?>
 
 <?php
     $data = getlistspec($_GET["id"]);
@@ -11,4 +11,4 @@
         <button class="btn btn-light" name="submit">Verwijder deze list?</button>
     </form>
 </Div>
-<?php include "footer.php";?>
+<?php include "../footer.php";?>

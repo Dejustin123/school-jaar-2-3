@@ -1,5 +1,5 @@
-<?php include "header.php";?>
-<?php require "function.php";?>
+<?php include "../module-header.php";?>
+<?php require "../function.php";?>
 
 <?php 
     $results = getList();
@@ -27,4 +27,4 @@
         <button class="btn btn-light" name="submit" >Maak Check aan</button>
     </form>
 </Div>
-<?php include "footer.php";?>
+<?php include "../footer.php";?>

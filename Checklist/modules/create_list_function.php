@@ -1,12 +1,14 @@
 <?php
 require '../function.php';
 
-if(isset($_POST)){
+if (isset($_POST))
+{
 	CreateList();
 	// var_dump($_POST);
 }
 //create list function
-function CreateList(){
+function CreateList()
+{
 	$conn = openDatabaseConnection();
 	$query = $conn->prepare(
 		'INSERT INTO `list` (`id`, `name`)

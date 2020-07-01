@@ -1,5 +1,5 @@
-<?php include "header.php";?>
-<?php require "function.php";?>
+<?php include "../module-header.php";?>
+<?php require "../function.php";?>
 
 <?php
     $data = Getcheck($_GET["ID"]);
@@ -15,4 +15,4 @@
         <button class="btn btn-light" name="submit">Verwijder uw bericht</button>
     </form>
 </Div>
-<?php include "footer.php";?>
+<?php include "../footer.php";?>

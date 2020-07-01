@@ -1,5 +1,5 @@
-<?php include "header.php";?>
-<?php require "function.php";?>
+<?php include "../module-header.php";?>
+<?php require "../function.php";?>
 <?php
     $data = getListspec($_GET["id"]);
 ?>
@@ -11,4 +11,4 @@
     </form>
 </div>
 
-<?php include "footer.php";?>
+<?php include "../footer.php";?>

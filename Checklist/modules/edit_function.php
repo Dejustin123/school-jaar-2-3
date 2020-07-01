@@ -3,11 +3,13 @@ require '../function.php';
 
 
 
-if(isset($_POST)){
+if (isset($_POST))
+{
     EditCheck($_POST);
 }
 //edit taak function
-function EditCheck($input){
+function EditCheck($input)
+{
 	$input['ID'] = intval($input['ID']);
 	$conn = openDatabaseConnection();
 	$query = $conn->prepare('UPDATE `checklist` SET ID = :id,Name = :Name,Description = :Description,Status = :Status,Time = :Time WHERE `checklist`.ID=:id');

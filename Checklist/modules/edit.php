@@ -1,5 +1,5 @@
-<?php include "header.php";?>
-<?php require "function.php";?>
+<?php include "../module-header.php";?>
+<?php require "../function.php";?>
 <?php
     $data = Getcheck($_GET["ID"]);
 ?>
@@ -19,4 +19,4 @@
     </form>
 </div>
 
-<?php include "footer.php";?>
+<?php include "../footer.php";?>
